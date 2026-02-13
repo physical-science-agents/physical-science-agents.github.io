@@ -220,7 +220,12 @@ img {
     gap: 28px;
 }
 
-.speaker-card,
+.speaker-card {
+    text-align: center;
+    width: calc(33.333% - 20px);
+    min-width: 150px;
+}
+
 .organizer-card {
     text-align: center;
     width: 170px;
