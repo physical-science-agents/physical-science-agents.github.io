@@ -1,0 +1,310 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ICML 2026 Workshop Proposal Template
+% 
+% Requirements (from https://icml.cc/Conferences/2026/CallForWorkshops):
+% - Two pages long (excluding organizer CVs and references)
+% - Single-column A4 or letter format
+% - Font size 11 or greater
+% - Maximum 8 organizers (5-6 recommended)
+%
+% Important Dates:
+% - Workshop submissions open: January 21, 2026
+% - Workshop application deadline: February 13, 2026, AOE
+% - Workshop notification: March 20, 2026
+% - Suggested Submission Date for Contributions: April 24, 2026 AOE
+% - Universal notification deadline: May 15, 2026, AOE
+%
+% Submit at: https://openreview.net/group?id=ICML.cc/2026/Workshop_Proposals
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt,a4paper]{article}
+
+% ===== PACKAGES =====
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{booktabs}
+\usepackage{parskip}
+
+% ===== FORMATTING =====
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!70!black,
+    urlcolor=blue!70!black,
+    citecolor=blue!70!black
+}
+
+% Compact section formatting
+\titleformat{\section}{\normalfont\large\bfseries}{\thesection}{1em}{}
+\titlespacing*{\section}{0pt}{1.5ex plus 0.5ex minus 0.2ex}{0.8ex plus 0.2ex}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection}{1em}{}
+\titlespacing*{\subsection}{0pt}{1ex plus 0.3ex minus 0.2ex}{0.5ex plus 0.1ex}
+
+% Reduce list spacing
+\setlist{nosep, leftmargin=*}
+
+% ===== DOCUMENT START =====
+\begin{document}
+
+% ===== TITLE =====
+\begin{center}
+    {\LARGE \textbf{Language, Reasoning, and Agents for Physical Sciences}}\\[0.5em]
+    {\large ICML 2026 Workshop Proposal} \\ 
+    {\textbf{Organizers:} Nolan Koblischke (University of Toronto), Helen Qu and Francisco Villaescusa-Navarro (Flatiron Institute), Yaoqing Yang and Yujun Yan (Dartmouth), Lukas Heinrich (TUM), and Eric Wong (University of Pennsylvania), Haewon Jeong (UCSB)}
+\end{center}
+
+\vspace{0.5em}
+
+% \section{Title Options}
+% \begin{itemize}
+%     \item  Language, Reasoning, and Agents for Physical Sciences
+%     \item Accelerating Physical Sciences with Agentic AI 
+%     \item  Agentic AI for Physical Sciences
+%     \item Automation, acceleration, and Agentic AI for Physical Sciences
+
+%     \item Language, Reasoning, and Agents for Physics-Driven Discovery
+% \end{itemize}
+
+
+\subsection*{Workshop Description}
+
+In the scientific community and beyond, there is growing excitement that AI may fundamentally accelerate the pace of scientific discovery. This promise is particularly compelling in the physical sciences, where progress is often constrained by costly experiments, large-scale facilities, and long simulation or data-analysis cycles. While recent advances have demonstrated the value of AI for isolated tasks—such as anomaly detection, surrogate modeling, or data-driven inference—these approaches typically operate as standalone components within a much larger scientific workflow.
+
+This workshop focuses on the emerging idea that \textbf{substantially greater acceleration may be achieved by agentic AI systems that can reason across multiple stages of the scientific pipeline and collaborate with human scientists in language.} Such agents raise new research questions central to the ICML community, including how to decompose scientific workflows into agentic tasks, how to incorporate physical knowledge and scientific constraints, how to evaluate agents in open-ended scientific settings, and how to design effective human–AI collaboration in discovery-driven research.
+
+The workshop aims to bring together researchers  at the intersection of AI and the physical sciences---spanning domains such as \textit{plasma physics, quantum and particle physics, astronomy, Earth and planetary sciences, and multiphysics engineering, chemistry}---to foster an informal and interdisciplinary discussion forum. By emphasizing early-stage ideas, open challenges, and critical perspectives, this workshop seeks to catalyze new directions in agentic AI research that are both methodologically rich and scientifically grounded, making it highly relevant to ICML audiences interested in the future of AI for scientific discovery. Key themes include:
+\begin{itemize}
+    \item \textbf{Theme 1: System Development.}  Designing agentic systems tailored to tasks in the physical sciences. These systems need not be fully end-to-end agents; instead, they may specialize in well-defined subtasks such as data curation and filtering, literature retrieval, hypothesis generation, or validation. Approaches that explicitly incorporate physical knowledge and prioritize human-centered design (e.g., interpretability tools for AI agents) are strongly encouraged. 
+    
+    \item \textbf{Theme 2: Benchmarks and Evaluations.} Developing datasets and evaluation protocols, and benchmarking existing or novel agents on concrete tasks in the physical sciences. We also welcome contributions that rigorously characterize current limitations and failure modes of AI agents in physics, including work on interpretability, diagnostics, and attribution tools that help reveal how and why agents make decisions in scientific settings.
+
+    
+    \item \textbf{Theme 3: Philosophy of AI-Driven Discovery.}  Examining how AI-driven automation may reshape the notion of scientific discovery in physics, including discussions on the future trajectory of the field, underexplored or neglected research directions, and emerging visions for effective collaboration between agentic AI systems and human scientists.
+\end{itemize}
+
+\textbf{Why ICML?} 
+This workshop is novel in its explicit focus on the physical sciences, where well-defined laws, constraints, simulators, and experimental pipelines create unique opportunities and challenges for agent design, evaluation, and interpretability that are underexplored in the current ICML literature. By grounding agentic AI in physics-driven discovery workflows, the workshop aims to catalyze new machine learning research directions that are both methodologically novel and scientifically rigorous, making ICML a natural and timely venue for this discussion.
+
+% Explain the connection to the ICML community, referencing relevant past papers, trends, or growing interest in this area.
+% \textcolor{red}{TODO: Highlight the novelty. Our uniqueness is focus on physics instead of ``general science'' and promote more focused discussion on physics discovery}
+
+\textbf{Relation to past events:} This workshop bridges the gap between two existing types of venues. Past events have typically focused either on general autonomous agents (e.g., Agentic AI for Science at ICLR; AI for Science at NeurIPS \& ICML), which often apply broad reasoning tools without specific attention to physics, or on general machine learning for specific science domains (e.g., Machine Learning and the Physical Sciences at NeurIPS; AI for Accelerated Materials Design at NeurIPS), which mainly use AI for simulation and prediction rather than independent decision-making.
+\textcolor{blue}{Our proposed workshop distinguishes itself by focusing on reasoning and agentic decision-making, specifically in the \emph{physical sciences}. Physics offers an unmatched testbed for agentic intelligence: it demands multistep logical reasoning, symbolic--numerical integration, and strict adherence to physical laws and governing equations. Success in physics therefore, provides the clearest and most rigorous demonstration that an agent can truly reason, plan, and discover under real scientific constraints.}
+
+
+
+% ===== SECTION 3: INVITED SPEAKERS =====
+\subsection*{Invited Speakers}
+% \textcolor{blue}{Highlight each speaker's expertise in language, reasoning, and agents, and show that we cover all three and many different scientific disciplines}
+% Specify who has been confirmed
+\begin{itemize}
+\textcolor{blue}{TODO: Tighten}
+    \item \textbf{Mengdi Wang} (MIT) -- \textit{Confirmed} \\
+          Pioneer at the intersection of reinforcement learning, optimization, and control for scientific and physical systems, including her recent work on GenEnv. 
+    \item \textbf{Rose Yu} (UCSD) -- \textit{Confirmed} \\
+         Leader at the intersection of machine learning and complex physical systems, with recent work such as Zephyrus: An Agentic Framework for Weather Science. 
+    
+    \item \textbf{Thomas Meier} (Ludwig Maximilian University of Munich) -- \textit{Tentative} \\
+    Philosopher of science whose work is well-suited to examining how AI-driven automation reshapes scientific discovery and human–AI collaboration in physics.
+    
+    \item \textbf{Sam Rodrigues} (FutureHouse) -- \textit{Confirmed} \\ 
+    Physicist-turned-entrepreneur building AI scientist frameworks at FutureHouse, where he leads efforts to create and evaluate agentic systems that can formulate hypotheses, search literature, and accelerate scientific discovery.
+
+    \item \textbf{Roberta Raileanu} (Google DeepMind) -- \textit{Confirmed} \\ 
+    Researcher developing agentic AI systems for scientific discovery, with recent work on hypothesis generation from structured scientific literature and on benchmarking research agents for search, exploration, and generalization.
+\end{itemize}
+Our lineup spans industry and academia, with industry representation including both an early-stage startup building agentic systems for scientific research and a large technology company, alongside leading figures in AI for Science from academia and a philosopher who will address the philosophy of AI-driven discovery---an important perspective often missing from AI venues.
+
+% ===== SECTION 2: SCHEDULE =====
+\subsection*{Tentative Schedule}
+\underline{08:00–08:15:} Opening Remarks;   \underline{08:15–09:45:} Invited Talks 1 \& 2 (45mins each). \underline{09:45-10:45} A coffee break with Poster Session I;  \underline{10:45–11:30:} Invited talk 3. \underline{11:30–11:50} Two contributed talks (10mins each); \underline{11:50–12:20} Social event: one-minute podium pitches from 11:50–12:20; \underline{13:15–14:45} Invited Talks 4 \& 5 (45mins each);  \underline{14:45–15:45} Coffee break with Poster Session II; \underline{15:45–16:05} Two contributed talks; \underline{16:05–16:50} Panel discussion; \underline{16:50–17:00} Award ceremony and closing remarks. 
+
+In designing the schedule, we ensured ample time for poster sessions and dedicated 30 minutes to a social hour, during which participants may give one-minute podium pitches on topics related to the workshop themes, including poster highlights, emerging ideas, hot takes, or new project proposals. All talks will be livestreamed, and posters will be made available on the ICML workshop webpage for virtual participants.
+
+\subsection*{External Engagements}
+\begin{itemize}
+    \item \textcolor{blue}{TODO part} Local student engagement with Hyundai car (in talks)
+    \item \$1000 Best paper award, sponsored by Renaissance Philanthropy (confirmed) 
+    \item Post-workshop networking event, sponsored by First Principles (in talks)
+\end{itemize}
+
+\subsection*{Potential Reviewers}
+We anticipate recruiting 30 reviewers, including Sid Kannan (UCSB), Tian Qiu (UCSB), Daniel Holmberg (University of Helsinki), Louisa Cornelis (UCSB), Mingshau Liu (Cambridge), Yaoqing Yang (Dartmouth), Xiaotian Liu (Dartmouth), Kyrie Jin (Dartmouth), Pu Ren (Lawrence Berkeley National Laboratory), Mike Smith (Harvard \& Smithsonian), Carolina Cuesta-Lazaro (NYU/Flatiron), Yuan-Sen Ting (Ohio State), Ioana Ciuca (Stanford), Sandy Yuan (Stanford), Boris Bolliet (Cambridge), ChangHoon Hahn (UT Austin), Jay Wadekar (UT Austin), Zheng Huang (Dartmouth), Siddharth Mishra-Sharma (Anthropic/Boston University), Nayanturu Muru (Harvard/Google Research), Kartheik Iyer (Flatiron/Columbia), Michael McCabe (Polymathic), Cristiana Diaconu (Cambridge), Tanya Marwah (Polymathic), and Oliver Liu (USC).
+% \subsection*{Tentative Schedule}
+% % Note: Workshops run from ~8:00 AM to 5:00 PM (1 day)
+% \begin{table}[h]
+% \centering
+% \small
+% \begin{tabular}{@{}ll@{}}
+% \toprule
+% \textbf{Time} & \textbf{Activity} \\
+% \midrule
+% 08:00 -- 08:15 & Opening Remarks \\
+% 08:15 -- 09:00 & Invited Talk 1 \\
+% 09:00 -- 09:45 & Invited Talk 2  \\
+% 09:45 -- 10:45 & Coffee Break \& Poster Session I \\
+% 10:45 -- 11:30 & Invited Talk 3  \\
+% 11:30 -- 11:50 & Contributed Talks (2 $\times$ 10 min) \\
+% 11:50 -- 12:20 & Some fun activities (one-minute podium picthes) \\
+% 12:20 -- 13:15 & Lunch Break \\
+% 13:15 -- 14:00 & Invited Talk 4 \\
+% 14:00 -- 14:45 & Invited Talk 5 \\
+% 14:45 -- 15:45 & Coffee Break \& Poster Session II \\
+% 15:45 -- 16:05 & Contributed Talks (2 $\times$ 10 min) \\
+% 16:05 -- 16:50 & Panel Discussion \\
+% 16:50 -- 17:00 & Closing Remarks \\
+% \bottomrule
+% \end{tabular}
+% \end{table}
+
+% Fun activity: 1 minute podium (idea pitch, hot take about AI for Science, reach out to poster presenters); pre-select from the papers and eavesdrop people's conversations and pick people  
+
+% % ===== SECTION 4: CONTRIBUTED CONTENT =====
+% \section{Call for Contributions}
+
+% We will solicit extended abstracts (4 pages) for contributed talks and posters. Topics include but are not limited to:
+% \begin{itemize}
+%     \item Topic area 1
+%     \item Topic area 2
+%     \item Topic area 3
+% \end{itemize}
+
+% \textbf{Review process:} All submissions will be reviewed by the organizing committee and selected based on quality, relevance, and diversity of perspectives. We expect to accept approximately X contributed talks and Y posters.
+
+% % ===== SECTION 5: HISTORY & RELATED EVENTS =====
+% \section{Workshop History and Related Events}
+
+% % If this is a new workshop
+% This is a \textbf{new workshop} proposed for ICML 2026.
+
+% % OR if continuing a previous workshop, describe history:
+% % This workshop builds on [Previous Workshop Name] held at [Conference, Year].
+% % Describe attendance, outcomes, and how this iteration differs/improves.
+
+% \textbf{Related events:}
+% \begin{itemize}
+%     \item \textit{Related Workshop 1} at ICML/NeurIPS 20XX -- Brief comparison
+%     \item \textit{Related Workshop 2} at ICML/NeurIPS 20XX -- Brief comparison
+% \end{itemize}
+
+% We differentiate our workshop by focusing on [unique aspects].
+
+% % ===== SECTION 6: DIVERSITY & INCLUSION =====
+% \section{Diversity and Inclusion}
+
+% We are committed to ensuring diversity in our speaker lineup, organizing team, and participant engagement. Our current speaker list represents [describe diversity: geographic, institutional, gender, career stage, etc.]. We will actively encourage submissions from underrepresented groups and ensure an inclusive environment.
+
+% ===== ESTIMATED REGISTRATIONS (for sold-out scenario) =====
+\subsection*{Anticipated Attendance}
+
+We anticipate approximately 200 participants. In the event of a sold-out conference, we request 30 guaranteed registrations for workshop contributors.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% END OF 2-PAGE PROPOSAL -- Content below does not count toward page limit
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+% ===== ORGANIZERS (Does not count toward 2-page limit) =====
+\section*{Organizers}
+
+% Maximum 8 organizers (5-6 recommended)
+% Designate 2 contact organizers
+
+\subsection*{Contact Organizers}
+
+\textbf{Eric Wong} \\
+University of Pennsylvania\\
+Email: \href{mailto:exwong@seas.upenn.edu}{exwong@seas.upenn.edu} \\
+Website: \url{https://www.cis.upenn.edu/~exwong/} \\
+Google Scholar: \url{https://scholar.google.com/citations?user=pWnTMRkAAAAJ&hl=en} \\
+\textit{Other ICML 2026 workshop proposals:} Frontiers of AdvML \\
+\textit{Attending in person:} Yes \\[0.5em]
+\textbf{Bio:} Eric Wong is an Assistant Professor at the University of Pennsylvania. His work focuses on how to integrate and enforce elements of trust into machine learning systems, including explaining neural networks for dark matter prediction in cosmology. He has organized several workshops on adversarial machine learning and robustness at AAAI, ICML, and ICLR. He was a co-chair of the {\href{https://advml-workshop.github.io/icml2021/}{{Workshop on The Prospects and Perils of AdvML}}} 
+%\cite{icml21_workshop_advML} 
+at ICML'21, and organized other related workshops in ICLR'21 and AAAI'22.
+
+\vspace{1em}
+
+
+\textbf{Haewon Jeong} \\
+Affiliation \\
+Email: \href{mailto:haewon@ucsb.edu}{haewon@ucsb.edu} \\
+Website: \url{https://haewonjeong.com} \\
+Google Scholar: \url{https://scholar.google.com/citations?user=h8wIUwUAAAAJ} \\
+\textit{Other ICML 2026 workshop proposals:} None  \\
+\textit{Attending in person:} Yes \\[0.5em]
+\textbf{Bio:}  Haewon Jeong is an Assistant Professor at UCSB and a visiting scholar at the Flatiron Institute. Her research expertise spans information theory, responsible and trustworthy machine learning, and AI for the physical sciences. She has developed information-theoretic methods for analyzing fairness, privacy, and accuracy trade-offs, with publications in leading machine learning venues, and has played an active leadership role in the Information Theory × Machine Learning community through organizing and speaking at interdisciplinary workshops. More recently, her work has focused on generative and agentic AI for scientific discovery, particularly in physics and cosmology, and she has presented this research at major venues, including ICML- and NeurIPS-affiliated workshops on machine learning for astrophysics and the physical sciences.
+
+\vspace{1em}
+
+\subsection*{Additional Organizers}
+
+\textbf{Nolan Koblischke} \\
+University of Toronto \\
+Email: \href{mailto:nolan.koblischke@mail.utoronto.ca}{nolan.koblischke@mail.utoronto.ca} \\
+Website: \url{https://nolank.ca/} \\
+Google Scholar: \url{https://scholar.google.com/citations?user=239WPlwAAAAJ} \\
+\textit{Other ICML 2026 workshop proposals:} None \\
+\textit{Attending in person:} Yes \\[0.5em]
+\textbf{Bio:} Nolan Koblischke is a PhD candidate researching AI and Astrophysics at the University of Toronto. His research focuses on developing AI benchmarks and agents for scientific discovery, including GravityBench (ICML'25) for evaluating language models on physics discovery tasks and ReplicationBench for assessing whether agents can replicate astrophysics research papers. He served as Area Chair for the NeurIPS 2025 Machine Learning for Physical Sciences workshop, managing reviewers for 50 papers.
+
+\vspace{1em}
+
+\textbf{Yaoqing Yang} \\
+Dartmouth College\\
+Email: \href{mailto:yaoqing.yang@dartmouth.edu}{yaoqing.yang@dartmouth.edu} \\
+Website: \url{https://sites.google.com/site/yangyaoqingcmu/} \\
+Google Scholar: \url{https://scholar.google.com/citations?user=LYvugWgAAAAJ&hl=en&oi=ao} \\
+\textit{Other ICML 2026 workshop proposals:} Combining Theory and Benchmarks \\
+\textit{Attending in person:} Yes \\[0.5em]
+\textbf{Bio:} Yaoqing Yang is an Assistant Professor at Dartmouth College. His research focuses on diagnosing model failures using statistical learning methods. He has worked on statistical physics approaches for ML and ML approaches for physics. He has played an active leadership role in the research community, serving as an organizer of the workshop “Agentic AI for Science,” held in conjunction with ICLR 2025, The Web Conference (WWW) 2025, and the AAAI 2025 Spring Symposium. He has also served as a program committee member for the ICML Workshop on Coding and Machine Learning (CodML).
+
+
+
+\textbf{Yujun Yan} \\
+Dartmouth College\\
+Email: \href{mailto:yaoqing.yang@dartmouth.edu}{yujun.yan@dartmouth.edu} \\
+Website: \url{https://sites.google.com/view/yujunyan?usp=sharing} \\
+Google Scholar: \url{https://scholar.google.com/citations?user=hEbFWm8AAAAJ&hl=en} \\
+\textit{Other ICML 2026 workshop proposals:} Towards End-to-End Automation in Materials Science:
+From Hypothesis Generation to Simulation, Validation, and Manufacturing; Combining Theory and Benchmarks: Towards A Virtuous Cycle to Understand and Guarantee Foundation Model Performance
+\textit{Attending in person:} Yes \\[0.5em]
+\textbf{Bio:}
+Yujun Yan is an Assistant Professor in the Computer Science Department at Dartmouth College. Her research advances both model-level and system-level machine intelligence through a graph-centric lens, drawing inspiration from neuroscience and the social sciences. She develops interpretable machine learning methods that improve transparency and support scientific discovery. Her work has appeared in top venues including ICML, NeurIPS, ICLR, KDD, and WWW, and has received over 2,700 citations. Beyond her research, Dr.~Yan holds multiple leadership roles in the community, including co-organizing three international workshops on AI for Science (ICLR 2025, The Web Conference (WWW) 2025, and the AAAI 2025 Spring Symposium), serving as co-chair of the inaugural Blue Sky Track at ICDM 2025, and serving as an Area Chair for NeurIPS 2025 and ICLR 2026.
+%\cite{ICLR21_workshop_rob,aaai22_workshop_advML}   
+
+\textbf{Helen Qu} \\
+Flatiron Institute\\
+Email: \href{mailto:hqu@flatironinstitute.org}{hqu@flatironinstitute.org} \\
+Website: \url{https://helenqu.com} \\
+Google Scholar: \url{https://scholar.google.com/citations?user=FWPJDb4AAAAJ&hl=en} \\
+\textit{Other ICML 2026 workshop proposals:} None \\
+\textit{Attending in person:} Yes \\[0.5em]
+\textbf{Bio:} Helen Qu is a postdoctoral fellow at the Flatiron Institute. She is interested in the role of science in AI and AI in science, with work spanning the spectrum from machine learning applications in cosmology to new methodology to improve applicability of AI to the sciences.
+
+\textbf{Francisco Villaescusa-Navarro} \\
+Flatiron Institute \& Princeton University\\
+Email: \href{mailto:fvillaescusa@flatironinstitute.org}{fvillaescusa@flatironinstitute.org} \\
+Website: \url{https://franciscovillaescusa.github.io/} \\
+Google Scholar: \url{https://scholar.google.com/citations?user=4_XEZBQAAAAJ&hl=en} \\
+\textit{Other ICML 2026 workshop proposals:} None \\
+\textit{Attending in person:} Yes \\[0.5em]
+\textbf{Bio:} Francisco is a research scientist at the Flatiron Institute and a visiting research scholar at Princeton University. Francisco's work has focused on developing very large astrophysical datasets containing Petabytes of data for machine learning training. He is one of the co-creators of Denario, an AI-assistant for end-to-end scientific research. His work has been cited over 11,000 times, and he has co-organized several workshops at ICML at the intersection of astrophysics and machine learning. 
+
+% Add more organizers as needed (up to 8 total)
+
+% ===== REFERENCES (Does not count toward 2-page limit) =====
+\newpage
+\section*{References}
+
+% Add references here if needed
+\begin{enumerate}[label={[\arabic*]}]
+    \item Author A, Author B. ``Paper Title.'' \textit{Conference/Journal}, Year.
+    \item Author C, Author D. ``Another Paper Title.'' \textit{Conference/Journal}, Year.
+\end{enumerate}
+
+\end{document}
